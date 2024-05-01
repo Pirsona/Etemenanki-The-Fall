@@ -20,18 +20,21 @@ public class MenuManager : MonoBehaviour
     {
         
     }
-    public void Quit() // Метод выхода из игры
+
+    public void Quit() // РњРµС‚РѕРґ РІС‹С…РѕРґР° РёР· РёРіСЂС‹
     {
         Application.Quit();
         Debug.Log("You Quit");
     }
-    public void DisableMainMenu() // Деактивирует кнопки главного меню
+
+    public void DisableMainMenu() // Р”РµР°РєС‚РёРІРёСЂСѓРµС‚ РєРЅРѕРїРєРё РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ
     {
        startGame.enabled = false;
        settingsGame.enabled = false;
        exitGame.enabled = false;   
     }
-    public void ActiveMainMenu() // Активирует кнопки главного меню
+
+    public void ActiveMainMenu() // РђРєС‚РёРІРёСЂСѓРµС‚ РєРЅРѕРїРєРё РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ
     {
         startGame.enabled = true;
         settingsGame.enabled = true;

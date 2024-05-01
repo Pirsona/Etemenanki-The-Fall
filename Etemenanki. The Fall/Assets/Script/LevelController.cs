@@ -18,15 +18,15 @@ public class LevelController : MonoBehaviour
         var currentLevel = PlayerPrefs.GetInt("currentLevel");
         SceneManager.LoadScene(currentLevel);
     }
+
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(0);
     }
+
     public void NewGame()
     {
-        PlayerPrefs.SetInt("ÒurrentLevel", 1);
+        PlayerPrefs.SetInt("—ÅurrentLevel", 1);
         SceneManager.LoadScene(1);
     }
-
-
 }
