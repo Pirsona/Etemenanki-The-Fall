@@ -23040,7 +23040,7 @@ PrefabInstance:
     - target: {fileID: 9074594807982636234, guid: 15745f8b70e5d524183539fa272d90a3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7440002
+      value: 3.708
       objectReference: {fileID: 0}
     - target: {fileID: 9074594807982636234, guid: 15745f8b70e5d524183539fa272d90a3,
         type: 3}
@@ -25562,12 +25562,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1001 &1701001988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27500,7 +27500,7 @@ PrefabInstance:
     - target: {fileID: 370700119056002103, guid: b89b3b3efb3070240952a3335d270247,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8700004
+      value: 3.834
       objectReference: {fileID: 0}
     - target: {fileID: 370700119056002103, guid: b89b3b3efb3070240952a3335d270247,
         type: 3}
