@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     CharacterController controller;
     Animator animator;
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     [Header("Controller")]
     public float moveSpeed = 5;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     { 
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        // audioSource = GetComponent<AudioSource>();
 
         playerInput = new PlayerInput();
         input = playerInput.Main;
