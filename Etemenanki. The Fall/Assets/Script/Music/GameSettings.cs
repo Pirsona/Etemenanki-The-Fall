@@ -9,7 +9,7 @@ public class GameSettings : MonoBehaviour
 
     private const string _settingsPrefsKey = "settings";
     private const float _defaultSoundVolume = 1.0f;
-    private const float _defaultMusicVolume = 1.0f;
+    private const float _defaultMusicVolume = 0.3f;
 
     private DTO_GameSettings _dto;
 
