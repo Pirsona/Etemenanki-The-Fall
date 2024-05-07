@@ -3,13 +3,16 @@ using UnityEngine.Audio;
 
 public class GameSettings : MonoBehaviour
 {
-    public AudioMixer _mixer;
+    // public AudioMixer _mixer;
     public float SoundVolume => _dto.SoundVolume;
     public float MusicVolume => _dto.MusicVolume;
 
-    private const string _settingsPrefsKey = "settings";
+    private const string _settingsPrefsKey = "audio_settings";
     private const float _defaultSoundVolume = 1.0f;
     private const float _defaultMusicVolume = 0.3f;
+
+    public AudioSource SoundSourceAudio;
+    public AudioSource MusicSourceAudio;
 
     private DTO_GameSettings _dto;
 
@@ -24,6 +27,8 @@ public class GameSettings : MonoBehaviour
         {
             _dto = DefaultDTO();
         }
+        SoundSourceAudio.volume = SoundVolume;
+        MusicSourceAudio.volume = MusicVolume;
         Debug.Log($"Sound Volume: {SoundVolume} | Music Volume: {MusicVolume} | Position: {_dto.Position}");
     }
 
@@ -31,12 +36,14 @@ public class GameSettings : MonoBehaviour
     {
         _dto.SoundVolume = volume;
         SaveDTO();
+        Awake();
     }
 
     public void SetMusicVolume(float volume)
     {
         _dto.MusicVolume = volume;
         SaveDTO();
+        Awake();
     }
 
     private void SaveDTO()
@@ -44,6 +51,7 @@ public class GameSettings : MonoBehaviour
         string json = JsonUtility.ToJson(_dto);
         PlayerPrefs.SetString(_settingsPrefsKey, json);
         PlayerPrefs.Save();
+        Debug.Log($"Sound Volume: {SoundVolume} | Music Volume: {MusicVolume} | Position: {_dto.Position}");
     }
 
     private void Update()
