@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenu; // Объект меню паузы
+    public List<GameObject> pauseGameObject; // Объекты для паузы во время меню
     public bool isPaused = false; // Состояние меню
 
     void Update()
@@ -32,6 +33,10 @@ public class PauseMenuController : MonoBehaviour
         isPaused = true;
         Cursor.visible = true;
         pauseMenu.SetActive(true);
+        foreach (var item in pauseGameObject)
+        {
+            item.SetActive(false);
+        }
     }
 
     void ResumeGame()
@@ -39,5 +44,9 @@ public class PauseMenuController : MonoBehaviour
         isPaused = false;
         Cursor.visible = false;
         pauseMenu.SetActive(false);
+        foreach (var item in pauseGameObject)
+        {
+            item.SetActive(true);
+        }
     }
 }
