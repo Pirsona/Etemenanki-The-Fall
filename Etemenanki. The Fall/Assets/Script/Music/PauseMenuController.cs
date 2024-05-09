@@ -8,6 +8,11 @@ public class PauseMenuController : MonoBehaviour
     public List<GameObject> pauseGameObject; // Объекты для паузы во время меню
     public bool isPaused = false; // Состояние меню
 
+    void Start()
+    {
+        TogglePause();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
