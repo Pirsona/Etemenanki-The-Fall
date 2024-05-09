@@ -36,9 +36,6 @@ public class PlayerController : MonoBehaviour
         playerInput = new PlayerInput();
         input = playerInput.Main;
         AssignInputs();
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     void Update()

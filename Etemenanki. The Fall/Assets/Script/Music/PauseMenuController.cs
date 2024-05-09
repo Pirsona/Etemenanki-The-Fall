@@ -31,6 +31,7 @@ public class PauseMenuController : MonoBehaviour
     void PauseGame()
     {
         isPaused = true;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         pauseMenu.SetActive(true);
         foreach (var item in pauseGameObject)
@@ -42,6 +43,7 @@ public class PauseMenuController : MonoBehaviour
     void ResumeGame()
     {
         isPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenu.SetActive(false);
         foreach (var item in pauseGameObject)
