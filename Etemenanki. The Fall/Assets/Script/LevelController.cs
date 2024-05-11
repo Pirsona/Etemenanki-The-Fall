@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+    private PlayerController playerController;
+
+    private void Awake()
+    {
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
+
     public void LoadNextLevel()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -19,6 +26,15 @@ public class LevelController : MonoBehaviour
     {
         var currentLevel = PlayerPrefs.GetInt("currentLevel");
         SceneManager.LoadScene(currentLevel);
+    }
+
+    public void RestartGame ()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && playerController.lifes == false)
+        {
+            Debug.Log("You Press");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void BackToMainMenu()

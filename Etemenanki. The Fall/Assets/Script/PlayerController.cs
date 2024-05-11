@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     CharacterController controller;
     Animator animator;
+    public GameObject arm;
     public AudioSource audioSource;
 
     [Header("Controller")]
@@ -27,8 +29,13 @@ public class PlayerController : MonoBehaviour
 
     float xRotation = 0f;
 
+    [Header("Lifes")]
+
+    public bool lifes = true;
+
     void Awake()
     { 
+
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         // audioSource = GetComponent<AudioSource>();
@@ -201,5 +208,14 @@ public class PlayerController : MonoBehaviour
 
         GameObject GO = Instantiate(hitEffect, pos, Quaternion.identity);
         Destroy(GO, 20);
+    }
+
+    public void DisablePlayer()
+    {
+        arm.SetActive(false);
+        moveSpeed = 0;
+        jumpHeight = 0;
+        readyToAttack = false;
+        sensitivity = 0;
     }
 }
