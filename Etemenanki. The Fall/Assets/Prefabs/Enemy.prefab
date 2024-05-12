@@ -220,6 +220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  player: {fileID: 0}
+  fireballPrefab: {fileID: 0}
+  detectionRadius: 10
+  fireballSpeed: 0.1
+  cooldownTime: 2
 --- !u!33 &8953863879292068245
 MeshFilter:
   m_ObjectHideFlags: 0

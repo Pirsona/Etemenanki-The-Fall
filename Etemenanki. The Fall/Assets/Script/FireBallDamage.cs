@@ -12,6 +12,13 @@ public class FireBallDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        playerController.lifes = false;
+        if (playerController.gameObject == other.gameObject) 
+        {
+            playerController.lifes = false;
+        }
+        else
+        {
+          Destroy(gameObject);
+        }
     }
 }
