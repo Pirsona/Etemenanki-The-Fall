@@ -8,12 +8,11 @@ public class PauseMenuController : MonoBehaviour
     public List<GameObject> pauseGameObject; // Объекты для паузы во время меню
     public bool isPaused = false; // Состояние меню
 
-
-    private void Awake()
+    void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        TogglePause();
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
