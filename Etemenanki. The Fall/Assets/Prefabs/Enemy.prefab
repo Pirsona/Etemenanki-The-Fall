@@ -190,7 +190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8953863879292068243
 Transform:
   m_ObjectHideFlags: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
   detectionRadius: 10
   fireballSpeed: 0.1
   cooldownTime: 2
+  fieldOfView: 90
 --- !u!33 &8953863879292068245
 MeshFilter:
   m_ObjectHideFlags: 0

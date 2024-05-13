@@ -16,9 +16,9 @@ public class FireBallDamage : MonoBehaviour
         {
             playerController.lifes = false;
         }
-        else
+        else if (gameObject.CompareTag("Fireball"))
         {
-          Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
