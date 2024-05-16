@@ -6,10 +6,11 @@ public class FireBallCreate : MonoBehaviour
 {
     private Actor _actor;
     public float aimHeightOffset = 5f;
+    public string NumberOFEnemy;
 
     private void Awake()
     {
-        _actor = GameObject.Find("Enemy").GetComponent<Actor>();
+        _actor = GameObject.Find("Enemy"+NumberOFEnemy).GetComponent<Actor>();
     }
     public void ShootFireball()
     {

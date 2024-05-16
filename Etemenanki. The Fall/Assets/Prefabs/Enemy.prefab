@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  NumberOFEnemy: 
   player: {fileID: 0}
   fireballPrefab: {fileID: 0}
   detectionRadius: 10

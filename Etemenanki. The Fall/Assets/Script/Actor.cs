@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
 public class Actor : MonoBehaviour
 {
     int currentHealth;
     public int maxHealth;
+    
+    public string NumberOFEnemy;
 
     // Ссылка на игрока
     public Transform player;
@@ -24,10 +27,11 @@ public class Actor : MonoBehaviour
     // Переменная, хранящая, видит ли противник игрока
     private bool playerDetected = false;
     private FireBallCreate _fireBallCreate;
+    
 
     void Awake()
     {
-        _fireBallCreate = GameObject.Find("FireballCuster").GetComponent<FireBallCreate>();
+        _fireBallCreate = GameObject.Find("FireballCuster"+NumberOFEnemy).GetComponent<FireBallCreate>();
         currentHealth = maxHealth;
     }
 
