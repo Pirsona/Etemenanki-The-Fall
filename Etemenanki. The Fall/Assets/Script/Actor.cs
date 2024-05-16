@@ -27,10 +27,15 @@ public class Actor : MonoBehaviour
     // ѕеременна€, хран€ща€, видит ли противник игрока
     private bool playerDetected = false;
     private FireBallCreate _fireBallCreate;
+    private Actor _actor;
+    private CapsuleCollider _capsuleCollider;
+    public Animator animator;
     
 
     void Awake()
     {
+        _capsuleCollider = GetComponent<CapsuleCollider>();
+        _actor = GetComponent<Actor>();
         _fireBallCreate = GameObject.Find("FireballCuster"+NumberOFEnemy).GetComponent<FireBallCreate>();
         currentHealth = maxHealth;
     }
@@ -45,9 +50,10 @@ public class Actor : MonoBehaviour
 
     void Death()
     {
-        // Death function
-        // TEMPORARY: Destroy Object
-        Destroy(gameObject);
+        animator.SetBool("die", true);
+          _actor.enabled = false;
+        _capsuleCollider.enabled = false;
+        
     }
 
 
@@ -85,6 +91,7 @@ public class Actor : MonoBehaviour
 
             if (playerDetected)
             {
+                animator.SetBool("ReadyToAttack", true);
                 // ѕоворачиваемс€ к игроку только по оси Y.
                 // ¬ычисл€ем направление к игроку, игнориру€ разницу в высоте.
                 Vector3 targetDirection = player.position - transform.position;
@@ -99,7 +106,8 @@ public class Actor : MonoBehaviour
                 // —трел€ем огненным шаром, если перезар€дка завершена
                 if (cooldownTimer <= 0f)
                 {
-                     _fireBallCreate.ShootFireball();
+
+                    _fireBallCreate.ShootFireball();
 
                     // —брасываем таймер перезар€дки после выстрела.
                     cooldownTimer = cooldownTime;
@@ -108,6 +116,8 @@ public class Actor : MonoBehaviour
         }
         else
         {
+            animator.SetBool("ReadyToAttack", false);
+            animator.SetBool("idle", true);
             // ≈сли игрок вне радиуса обнаружени€, устанавливаем playerDetected в false
             playerDetected = false;
         }
