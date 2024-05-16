@@ -1702,7 +1702,7 @@ GameObject:
   - component: {fileID: 3887600191116800268}
   - component: {fileID: 1218300878201872101}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3458,6 +3458,8 @@ MonoBehaviour:
   pauseMenu: {fileID: 100158057281552361}
   pauseGameObject:
   - {fileID: 3042323697646195985}
+  - {fileID: 8953863879292068232, guid: fce74bd34ec6aae4a8a62439c30af2e0, type: 3}
+  - {fileID: 261437166879159211, guid: 6ec64fda090d72548a12dc210ee56d3a, type: 3}
   isPaused: 1
 --- !u!1 &5941307341524808987
 GameObject:
@@ -5619,6 +5621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 481995042327841608, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e,
         type: 3}
+      propertyPath: arm
+      value: 
+      objectReference: {fileID: 3591077315757592197}
+    - target: {fileID: 481995042327841608, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -5641,6 +5648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788623314744564116, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1788623314744564118, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e,
         type: 3}
@@ -5721,6 +5733,12 @@ GameObject:
 --- !u!4 &3042323697646195986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1788623314744564119, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3669015485650865285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3591077315757592197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 233316297873637888, guid: 0630ddb66c43ce74b926a6ec5e0b0b3e,
     type: 3}
   m_PrefabInstance: {fileID: 3669015485650865285}
   m_PrefabAsset: {fileID: 0}
