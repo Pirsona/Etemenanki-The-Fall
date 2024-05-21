@@ -26,6 +26,6 @@ public class FireBallCreate : MonoBehaviour
         Vector3 direction = (targetPosition - transform.position).normalized;
 
         // Придаем огненному шару скорость в нужном направлении.
-        fireballRigidbody.velocity = direction * _actor.fireballSpeed * Time.deltaTime;
+        fireballRigidbody.velocity = direction * _actor.fireballSpeed;
     }
 }

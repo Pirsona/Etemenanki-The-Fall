@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   NumberOFEnemy: 1
+  audioSource: {fileID: 0}
   player: {fileID: 0}
   fireballPrefab: {fileID: 261437166879159211, guid: 6ec64fda090d72548a12dc210ee56d3a,
     type: 3}

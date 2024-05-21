@@ -9,6 +9,7 @@ public class Actor : MonoBehaviour
     public int maxHealth;
     
     public string NumberOFEnemy;
+    public AudioSource audioSource;
 
     // —сылка на игрока
     public Transform player;
@@ -43,7 +44,7 @@ public class Actor : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
-
+        audioSource.Play();
         if(currentHealth <= 0)
         { Death(); }
     }
